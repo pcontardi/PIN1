@@ -9,10 +9,9 @@ pipeline {
     ARTIFACT_ID = "elbuo8/webapp:${env.BUILD_NUMBER}"
   }
    stages {
-   stage('Building image') {
+   stage('Building images') {
       steps{
           sh '''
-          cd webapp
           docker build -t testapp .
              '''  
         }
